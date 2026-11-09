@@ -249,6 +249,12 @@ a.badge:hover { transform: translate(-2px, -2px) rotate(-1deg); box-shadow: 7px 
 .thumb.steps .last { background: #FFE45C; }
 .thumb.steps.dark .last { background: var(--blue); border-color: var(--blue); color: #fff; }
 
+.thumb.shotpad { display: flex; align-items: center; justify-content: center; padding: 14px; background: #fff; }
+.thumb.shotpad img { height: auto; max-height: 100%; object-fit: contain; }
+.thumb.shotpad.dark { background: #0d1a1a; padding: 0; }
+.thumb.shotpad.dark img { height: 100%; object-fit: cover; object-position: left top; }
+.grid3 .thumb img { transition: transform .4s ease; }
+.grid3 .card:hover .thumb img { transform: scale(1.03); }
 /* stats strip */
 .stats { padding: 0 0 72px; border-top: 0; }
 .stats .grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 2px solid var(--ink); background: var(--card); box-shadow: 6px 6px 0 var(--ink); }
@@ -297,7 +303,7 @@ a.badge:hover { transform: translate(-2px, -2px) rotate(-1deg); box-shadow: 7px 
 .slider-arrows button { cursor: pointer; width: 46px; height: 46px; padding: 0; font-size: 18px; }
 .slider-progress { height: 3px; background: rgba(17,17,17,.12); margin-top: 14px; overflow: hidden; }
 .slider-progress i { display: block; height: 100%; width: 100%; background: var(--blue); transform-origin: left; transform: scaleX(0); }
-.slider-progress i.run { animation: sp 7s linear forwards; }
+.slider-progress i.run { animation: sp 3s linear forwards; }
 .slider.paused .slider-progress i.run { animation-play-state: paused; }
 @keyframes sp { to { transform: scaleX(1); } }
 .rv-meta .mono { color: var(--ink); }
@@ -320,13 +326,12 @@ a.badge:hover { transform: translate(-2px, -2px) rotate(-1deg); box-shadow: 7px 
 </style>
 </head>
 <body>
-<a class="skip" href="#services">Skip to content</a>
+<a class="skip" href="#work">Skip to content</a>
 
 <nav>
   <div class="wrap">
     <a class="brand" href="#top"><span>●</span> Mahnoor Umar</a>
     <div class="links">
-      <a href="#services">Services</a>
       <a href="#work">Work</a>
       <a href="#clients">Clients</a>
       <a href="#experience">Experience</a>
@@ -347,7 +352,6 @@ a.badge:hover { transform: translate(-2px, -2px) rotate(-1deg); box-shadow: 7px 
     <h1 class="hello"><span class="im">I'm</span> <span class="name">Mahnoor</span><span class="script">I build AI systems</span><span class="big">that scale.</span></h1>
     <div class="pitch">
       <p>I build AI voice agents, lead generation systems and the CRMs behind them. I'm currently the AI Agent Developer at Skimmy AI, an Australian voice AI startup.</p>
-      <p>I take on B2B automation projects and I'm open to remote roles.</p>
       <span class="mono">Karachi, PK (UTC+5) · working with teams in AU, NZ, the US and the Gulf</span>
     </div>
     <div class="photo">
@@ -362,69 +366,9 @@ a.badge:hover { transform: translate(-2px, -2px) rotate(-1deg); box-shadow: 7px 
   <div class="wrap">
     <div class="grid reveal">
       <div class="stat"><b>1 <em>month</em></b><span>to build Skimmy's outbound system, from lead scraping to sending</span></div>
-      <div class="stat"><b>258</b><span>leads cleaned, verified and scored by the CRM in its first runs</span></div>
+      <div class="stat"><b>109</b><span>qualified leads in Skimmy's CRM, each with a verified mailbox</span></div>
       <div class="stat"><b>5.0<em>★</em></b><span>Upwork rating on my n8n + Odoo CRM build</span></div>
       <div class="stat"><b>5</b><span>markets I've shipped for: AU, NZ, US, the Gulf, PK</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="services">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <h2>What I build</h2>
-      <p>For businesses losing time on missed calls, bad lead lists and copy-paste admin.</p>
-    </div>
-    <div class="svc">
-      <article class="card reveal">
-        <span class="num">01 / VOICE</span>
-        <h3>AI voice agents</h3>
-        <p>An agent that answers your phone line, handles common questions and books appointments into your calendar. Every call is logged and scored, so your team knows which callers to follow up.</p>
-        <div class="proof">Building this now at Skimmy AI</div>
-      </article>
-      <article class="card reveal">
-        <span class="num">02 / OUTBOUND</span>
-        <h3>Lead generation and cold outreach</h3>
-        <p>Finds businesses that match your ideal customer, verifies their emails, scores each lead with AI and sends a personalised first email. Your sales team only sees leads worth a call.</p>
-        <div class="proof">Built Skimmy's full outbound system in one month</div>
-      </article>
-      <article class="card reveal">
-        <span class="num">03 / CHAT</span>
-        <h3>WhatsApp and website chat agents</h3>
-        <p>Replies to customers in real time, answers product and account questions, takes orders and passes the conversation to a person when it should.</p>
-        <div class="proof">Shipped for Payze.nz, a Shopify brand and my own store</div>
-      </article>
-      <article class="card reveal">
-        <span class="num">04 / WORKFLOWS</span>
-        <h3>Workflow automation and CRM integrations</h3>
-        <p>Connects the tools you already pay for (CRM, Gmail, Calendar, Sheets, Odoo) so data moves on its own. Built in n8n or Python, with a handover doc your team can maintain.</p>
-        <div class="proof">n8n + OpenAI + Odoo for a US client, rated 5.0</div>
-      </article>
-    </div>
-    <div class="hire reveal">
-      <div>
-        <h3>Hiring for a remote role?</h3>
-        <p>I'm open to full-time or contract roles as an AI Agent Developer or Automation Engineer. I work async, write things down, and have shipped production work for teams in Australia, New Zealand and the US.</p>
-      </div>
-      <div class="cta">
-        <a class="btn dark" href="#experience">Track record</a>
-        <a class="btn" href="https://github.com/mahnouor1" target="_blank" rel="noopener"><i class="ic" data-i="github"></i> GitHub</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="process">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <h2>How a project runs</h2>
-      <p>No long proposals. You see something working early, on your own data.</p>
-    </div>
-    <div class="steps4 reveal">
-      <div class="step"><span class="n">01</span><h3>Call</h3><p>You walk me through the process. I tell you straight if automation fits, and what it won't fix.</p><span class="t">30 min</span></div>
-      <div class="step"><span class="n">02</span><h3>Prototype</h3><p>A working version on a sample of your real data, so you judge results, not slides.</p><span class="t">usually within a week</span></div>
-      <div class="step"><span class="n">03</span><h3>Build</h3><p>Production version with error handling, logging and alerts, connected to the tools you already use.</p><span class="t">scoped up front</span></div>
-      <div class="step"><span class="n">04</span><h3>Handover</h3><p>Written docs and a recorded walkthrough so your team can run it without me.</p><span class="t">yours to keep</span></div>
     </div>
   </div>
 </section>
@@ -449,49 +393,48 @@ a.badge:hover { transform: translate(-2px, -2px) rotate(-1deg); box-shadow: 7px 
       </div>
     </article>
 
-    <article class="card feature reveal">
-      <a class="shot" href="https://crm-roadmap-xi.vercel.app/" target="_blank" rel="noopener"><img src="outreach.jpg" alt="Skimmy CRM dashboard showing total, qualified and disqualified leads" loading="lazy"></a>
-      <div class="body">
-        <div><span class="chip live">Live · Skimmy AI</span></div>
-        <h3>An outbound system built from scratch in one month</h3>
-        <p>As Lead GTM Engineer I built everything that feeds Skimmy's sales. Hermes finds the leads, the CRM cleans them, JEV scores them and n8n sends the emails.</p>
-        <p>The CRM is the single source of truth. It imports lead lists, removes duplicates, checks each website and verifies the mailbox before anything is sent, so the domain doesn't burn on bounces and nobody gets emailed twice.</p>
-        <div class="flow"><span>Hermes</span><i>→</i><span>Import</span><i>→</i><span>Dedupe</span><i>→</i><span>Site check</span><i>→</i><span>Mailbox verify</span><i>→</i><span>JEV score</span><i>→</i><span>n8n + Gemini send</span></div>
-        <div class="proof">258 leads processed, 42 qualified in the first runs</div>
-        <div class="stack"><span><i class="ic" data-i="n8n"></i>n8n</span><span><i class="ic" data-i="gemini"></i>Gemini</span><span><i class="ic" data-i="crm"></i>Custom CRM</span><span><i class="ic" data-i="verify"></i>Mailbox verification</span><span><i class="ic" data-i="smtp"></i>SMTP</span><span><i class="ic" data-i="server"></i>Oracle Cloud VPS</span></div>
-        <a class="more" href="https://crm-roadmap-xi.vercel.app/" target="_blank" rel="noopener">See the CRM roadmap ↗</a>
-      </div>
-    </article>
 
     <div class="grid3">
       <article class="card reveal">
-        <div class="thumb steps dark" aria-hidden="true"><span>"10 dental clinics in Sydney"</span><span>scrape Google Maps</span><span>crawl websites</span><span>verify emails</span><span class="last">push to CRM</span></div>
+        <a class="thumb" href="https://crm-roadmap-xi.vercel.app/" target="_blank" rel="noopener"><img src="crm.jpg" alt="Skimmy CRM dashboard: 142 total leads, 109 qualified, 111 verified emails" loading="lazy"></a>
+        <div class="body">
+          <div><span class="chip live">Live · Skimmy AI</span></div>
+          <h3>An outbound system built in one month</h3>
+          <p>As Lead GTM Engineer I built everything that feeds Skimmy's sales. Hermes finds leads, the CRM imports them, removes duplicates, checks each website and verifies the mailbox, JEV scores them, and n8n + Gemini sends the emails. Sending is capped per inbox so the domain stays healthy.</p>
+          <div class="proof">142 leads in the CRM · 109 qualified · 111 verified emails</div>
+          <div class="stack"><span><i class="ic" data-i="n8n"></i>n8n</span><span><i class="ic" data-i="gemini"></i>Gemini</span><span><i class="ic" data-i="crm"></i>Custom CRM</span><span><i class="ic" data-i="verify"></i>Mailbox verification</span><span><i class="ic" data-i="smtp"></i>SMTP</span><span><i class="ic" data-i="server"></i>Oracle Cloud VPS</span></div>
+          <a class="more" href="https://crm-roadmap-xi.vercel.app/" target="_blank" rel="noopener">See the CRM roadmap ↗</a>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="thumb shotpad dark"><img src="hermes.jpg" alt="Hermes Agent console with the lead-engine MCP tools and 53 skills loaded" loading="lazy"></div>
         <div class="body">
           <div><span class="chip live">Live · Skimmy AI</span></div>
           <h3>Hermes, a lead-gen agent you can talk to</h3>
           <p>Ask for leads in plain English and Hermes starts a background job. It scrapes Google Maps, crawls each business website for contact details and verifies the emails. Every job has a live log, and results land in the CRM.</p>
-          <div class="proof">Self-hosted on Nous Research's Hermes Agent, with my own lead-engine skill and dashboard</div>
+          <div class="proof">Runs on Nous Research's Hermes Agent with my own lead-engine MCP server</div>
           <div class="stack"><span><i class="ic" data-i="bot"></i>Hermes Agent</span><span><i class="ic" data-i="gemini"></i>Gemini</span><span><i class="ic" data-i="search"></i>Maps scraping</span><span><i class="ic" data-i="verify"></i>Email verification</span><span><i class="ic" data-i="api"></i>MCP</span><span><i class="ic" data-i="server"></i>VPS</span></div>
         </div>
       </article>
 
       <article class="card reveal">
-        <div class="thumb steps blue" aria-hidden="true"><span>select 50 leads</span><span>queued</span><span>running</span><span>ICP · verdict · fit score</span><span class="last">tokens · cost · time</span></div>
+        <div class="thumb"><img src="jev.jpg" alt="JEV run: 10 leads classified with ICP, verdict, fit score, tokens and time per lead" loading="lazy"></div>
         <div class="body">
           <div><span class="chip live">Live · Skimmy AI</span></div>
           <h3>JEV, an AI lead classifier that shows its cost</h3>
           <p>Pick a lead segment and a batch size, press Classify, and it runs in the background. Each lead comes back with the matching ICP, a verdict and a fit score, plus the real tokens, cost and processing time for that lead.</p>
-          <div class="proof">You see the cost per lead before you scale a campaign</div>
+          <div class="proof">Last run: 10 leads scored in 7.9 s, about 470 ms per lead, 8,033 tokens</div>
           <div class="stack"><span><i class="ic" data-i="gemini"></i>Gemini</span><span><i class="ic" data-i="filter"></i>ICP scoring</span><span><i class="ic" data-i="server"></i>Job queue</span><span><i class="ic" data-i="chart"></i>Cost tracking</span></div>
         </div>
       </article>
 
       <article class="card reveal">
-        <div class="thumb steps white" aria-hidden="true"><span>kaggle: 2× T4 GPU</span><span>ollama serve</span><span>proxy + ngrok tunnel</span><span>tool-call tests</span><span class="last">swap into Hermes?</span></div>
+        <div class="thumb shotpad"><img src="ollama.png" alt="Kaggle notebook output: public ngrok endpoint serving qwen3-30b through Ollama, protected by a proxy key" loading="lazy"></div>
         <div class="body">
           <div><span class="chip testing">Testing</span></div>
           <h3>Self-hosted LLM on a free GPU</h3>
-          <p>Model API bills grow with every lead you score. I'm running an open-weight model with Ollama on Kaggle's free GPUs (2× NVIDIA T4, 30 GB VRAM), behind a proxy and an ngrok tunnel so Hermes can call it like any API. Now testing whether its tool calling is reliable enough to replace Gemini.</p>
+          <p>Model API bills grow with every lead you score. I'm running Qwen3 30B with Ollama on Kaggle's free GPUs (2× NVIDIA T4, 30 GB VRAM), behind a key-protected proxy and an ngrok tunnel so Hermes can call it like any API. Now testing whether its tool calling is reliable enough to replace Gemini.</p>
           <div class="proof">Goal: same lead quality at close to zero model cost</div>
           <div class="stack"><span><i class="ic" data-i="cpu"></i>Ollama</span><span><i class="ic" data-i="cpu"></i>Kaggle 2× T4</span><span><i class="ic" data-i="hook"></i>ngrok</span><span><i class="ic" data-i="api"></i>Tool calling</span><span><i class="ic" data-i="code"></i>Python</span></div>
         </div>
@@ -515,17 +458,6 @@ a.badge:hover { transform: translate(-2px, -2px) rotate(-1deg); box-shadow: 7px 
           <h3>Support chatbot for a fintech startup</h3>
           <p>Payze.nz was answering the same customer questions by hand. I built the bot in Botpress with a custom CSS frontend to match their brand, and connected it to their backend so it answers with real-time data instead of canned replies.</p>
           <div class="stack"><span><i class="ic" data-i="bot"></i>Botpress</span><span><i class="ic" data-i="code"></i>Custom CSS</span><span><i class="ic" data-i="api"></i>API integration</span><span><i class="ic" data-i="hook"></i>Webhooks</span></div>
-        </div>
-      </article>
-
-      <article class="card reveal">
-        <div class="thumb steps dark" aria-hidden="true"><span>"move Acme to Won"</span><span>OpenAI parses intent</span><span>n8n routes</span><span class="last">Odoo record updated</span></div>
-        <div class="body">
-          <div><span class="chip client">Client · US, Upwork</span></div>
-          <h3>Plain-English control for an Odoo CRM</h3>
-          <p>The team was updating their CRM by hand. I connected n8n and OpenAI to Odoo so they type a request in normal language and the system finds, creates or updates the right records. Delivered in four days.</p>
-          <div class="proof">5.0 on Upwork, review below</div>
-          <div class="stack"><span><i class="ic" data-i="n8n"></i>n8n</span><span><i class="ic" data-i="llm"></i>OpenAI</span><span><i class="ic" data-i="odoo"></i>Odoo</span><span><i class="ic" data-i="api"></i>MCP</span></div>
         </div>
       </article>
 
@@ -585,28 +517,9 @@ a.badge:hover { transform: translate(-2px, -2px) rotate(-1deg); box-shadow: 7px 
             <blockquote>"Working with Mahnoor was a smooth experience. She delivered a well built AI automation system that improved how we handle client interactions and internal workflows. She quickly grasped the use case and translated it into a working solution using n8n and OpenAI with Odoo integration. Communication was consistent and clear throughout, and she handled feedback without delays. The final system runs smoothly, responds accurately to natural language commands, and significantly reduced manual effort in CRM tasks."</blockquote>
             <figcaption class="who"><b>Sidra</b><span class="mono">Client, United States</span></figcaption>
           </figure>
-          <figure class="quote review" aria-roledescription="slide">
-            <div class="rv-top">
-              <div>
-                <div class="rv-title">AI agent for a mental-health platform</div>
-                <div class="rv-meta"><span class="mono">Verified client · Apr 2026</span></div>
-              </div>
-              <div class="rv-price"><b>Voice + chat</b><span class="mono">Context-aware agent</span></div>
-            </div>
-            <blockquote>"Working with Mahnoor was an exceptional experience. She built a highly intelligent AI agent for our mental-health platform — context-aware, voice-integrated, and continuously learning. Her ability to combine technical expertise with empathy-driven design truly set her apart. She delivered beyond expectations."</blockquote>
-            <figcaption class="who"><b>Furzam H.</b><span class="mono">Client, mental-health platform</span></figcaption>
-          </figure>
         </div>
       </div>
       <div class="slider-progress" aria-hidden="true"><i></i></div>
-      <div class="slider-nav">
-        <div class="slider-dots" role="tablist" aria-label="Choose review"></div>
-        <div class="slider-arrows">
-          <span class="count mono" aria-live="polite"></span>
-          <button class="btn" type="button" data-prev aria-label="Previous review">←</button>
-          <button class="btn dark" type="button" data-next aria-label="Next review">→</button>
-        </div>
-      </div>
     </div>
 
     <h3 class="ach sm reveal"><span class="sticker">Badges &amp; certificates <span class="spark" aria-hidden="true">✦</span></span></h3>
@@ -725,7 +638,7 @@ document.querySelectorAll('[data-slider]').forEach(root => {
     const b = document.createElement('button');
     b.type = 'button'; b.setAttribute('role', 'tab'); b.setAttribute('aria-label', 'Review ' + (n + 1));
     b.addEventListener('click', () => { go(n); restart(); });
-    dotsWrap.appendChild(b); return b;
+    if (dotsWrap) dotsWrap.appendChild(b); return b;
   });
   function go(n) {
     i = (n + slides.length) % slides.length;
@@ -739,9 +652,7 @@ document.querySelectorAll('[data-slider]').forEach(root => {
     bar.classList.remove('run'); void bar.offsetWidth; bar.classList.add('run');
   }
   bar.addEventListener('animationend', () => { go(i + 1); restart(); });
-  root.querySelector('[data-prev]').addEventListener('click', () => { go(i - 1); restart(); });
-  root.querySelector('[data-next]').addEventListener('click', () => { go(i + 1); restart(); });
-  root.addEventListener('mouseenter', () => root.classList.add('paused'));
+      root.addEventListener('mouseenter', () => root.classList.add('paused'));
   root.addEventListener('mouseleave', () => root.classList.remove('paused'));
   root.addEventListener('focusin', () => root.classList.add('paused'));
   root.addEventListener('focusout', () => root.classList.remove('paused'));
@@ -749,6 +660,7 @@ document.querySelectorAll('[data-slider]').forEach(root => {
   let x0 = null;
   track.addEventListener('pointerdown', e => { x0 = e.clientX; });
   track.addEventListener('pointerup', e => { if (x0 === null) return; const dx = e.clientX - x0; x0 = null; if (Math.abs(dx) > 50) { go(i + (dx < 0 ? 1 : -1)); restart(); } });
+  if (slides.length < 2) root.querySelector('.slider-progress').style.display = 'none';
   go(0); restart();
 });
 </script>
