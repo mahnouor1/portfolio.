@@ -266,6 +266,20 @@ a.badge:hover { transform: translate(-2px, -2px) rotate(-1deg); box-shadow: 7px 
 .grid3 .thumb img { transition: transform .4s ease; }
 .grid3 .card:hover .thumb img { transform: scale(1.03); }
 #clients, #experience, .contact { content-visibility: auto; contain-intrinsic-size: auto 1200px; }
+.built-for { margin-top: 28px; }
+.bf-label { display: block; color: var(--muted); margin-bottom: 12px; text-transform: uppercase; letter-spacing: .5px; }
+.bf-grid { display: grid; grid-template-columns: repeat(5, 1fr); border: 2px solid var(--ink); background: var(--card); }
+.bf { padding: 18px 18px 20px; border-left: 2px solid var(--ink); }
+.bf:first-child { border-left: 0; }
+.bf b { display: block; font-size: 17px; letter-spacing: -.2px; }
+.bf span { display: block; font: 600 11px var(--mono); color: var(--blue); margin-top: 4px; }
+.bf p { margin: 10px 0 0; font-size: 14px; color: #333; line-height: 1.4; }
+@media (max-width: 900px) {
+  .bf-grid { grid-template-columns: 1fr 1fr; }
+  .bf { border-left: 0; border-top: 2px solid var(--ink); }
+  .bf:nth-child(-n+2) { border-top: 0; }
+  .bf:nth-child(even) { border-left: 2px solid var(--ink); }
+}
 /* stats strip */
 .stats { padding: 0 0 72px; border-top: 0; }
 .stats .grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 2px solid var(--ink); background: var(--card); box-shadow: 6px 6px 0 var(--ink); }
@@ -531,6 +545,17 @@ a.badge:hover { transform: translate(-2px, -2px) rotate(-1deg); box-shadow: 7px 
         </div>
       </div>
       <div class="slider-progress" aria-hidden="true"><i></i></div>
+    </div>
+
+    <div class="built-for reveal" aria-label="Companies I've built for">
+      <span class="mono bf-label">Teams I've built for</span>
+      <div class="bf-grid">
+        <div class="bf"><b>Skimmy AI</b><span>Australia · voice AI</span><p>Voice agent, outbound system, Hermes, JEV</p></div>
+        <div class="bf"><b>Payze.nz</b><span>New Zealand · fintech</span><p>Botpress support chatbot</p></div>
+        <div class="bf"><b>RootOut</b><span>Pakistan · Shopify brand</span><p>WhatsApp Business API agent</p></div>
+        <div class="bf"><b>Himalayan salt exporter</b><span>Pakistan · B2B export</span><p>Multi-agent lead pipeline</p></div>
+        <div class="bf"><b>US client</b><span>United States · via Upwork</span><p>n8n + OpenAI + Odoo CRM</p></div>
+      </div>
     </div>
 
     <h3 class="ach sm reveal"><span class="sticker">Badges &amp; certificates <span class="spark" aria-hidden="true">✦</span></span></h3>
