@@ -420,13 +420,13 @@ a.badge:hover { transform: translate(-2px, -2px) rotate(-1deg); box-shadow: 7px 
       </article>
 
       <article class="card reveal">
-        <div class="thumb steps white" aria-hidden="true"><span>ollama serve</span><span>free cloud GPU</span><span>OpenAI-style endpoint</span><span>tool-call tests</span><span class="last">swap into Hermes?</span></div>
+        <div class="thumb steps white" aria-hidden="true"><span>kaggle: 2× T4 GPU</span><span>ollama serve</span><span>proxy + ngrok tunnel</span><span>tool-call tests</span><span class="last">swap into Hermes?</span></div>
         <div class="body">
           <div><span class="chip testing">Testing</span></div>
           <h3>Self-hosted LLM on a free GPU</h3>
-          <p>Model API bills grow with every lead you score. I'm running an open-weight model with Ollama on a free cloud GPU, exposed as an API, and testing whether its tool calling is reliable enough to replace Gemini inside Hermes.</p>
+          <p>Model API bills grow with every lead you score. I'm running an open-weight model with Ollama on Kaggle's free GPUs (2× NVIDIA T4, 30 GB VRAM), behind a proxy and an ngrok tunnel so Hermes can call it like any API. Now testing whether its tool calling is reliable enough to replace Gemini.</p>
           <div class="proof">Goal: same lead quality at close to zero model cost</div>
-          <div class="stack"><span><i class="ic" data-i="cpu"></i>Ollama</span><span><i class="ic" data-i="llm"></i>Open-weight LLM</span><span><i class="ic" data-i="api"></i>Tool calling</span><span><i class="ic" data-i="code"></i>Python</span></div>
+          <div class="stack"><span><i class="ic" data-i="cpu"></i>Ollama</span><span><i class="ic" data-i="cpu"></i>Kaggle 2× T4</span><span><i class="ic" data-i="hook"></i>ngrok</span><span><i class="ic" data-i="api"></i>Tool calling</span><span><i class="ic" data-i="code"></i>Python</span></div>
         </div>
       </article>
 
